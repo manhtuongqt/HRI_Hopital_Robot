@@ -1,0 +1,29 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+
+  <env name="GAZEBO_MODEL_PATH" value="$(find hospital_robot)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find hospital_robot)/worlds/hospital.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+  <param name="robot_description" textfile="$(find hospital_robot)/urdf/robot.urdf"/>
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -model hospital_robot -param robot_description -x 10 -y 0 -z 0 -Y -1.570796 "/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value=""/>
+    
+    <param name="use_tf_static" value="false"/>
+    
+    <param name="use_sim_time" value="true"/>
+  </node>
+  
+</launch>
