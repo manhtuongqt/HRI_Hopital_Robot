@@ -57,17 +57,17 @@ Hệ thống tương tác Người - Robot (HRI) tiên tiến cho robot dịch v
 - Các thư viện Python cần thiết:
   ```bash
   pip install SpeechRecognition gTTS requests
-Các bước thực hiện
-1.Clone repository:
+## Các bước thực hiện
+### 1.Clone repository:
 git clone https://github.com/manhtuongqt/HRI_Hopital_Robot.git
 cd HRI_Hopital_Robot
-2.Khởi tạo cơ sở dữ liệu:
+### 2.Khởi tạo cơ sở dữ liệu:
 python3 init_db.py
-3.Khởi chạy simulation (hãy đảm bảo bạn đã source workspace ROS):
+### 3.Khởi chạy simulation (hãy đảm bảo bạn đã source workspace ROS):
 roslaunch hospital_simulation hospital.launch
-4.Chạy node điều khiển bằng giọng nói:
+### 4.Chạy node điều khiển bằng giọng nói:
 python3 voice_navigation.py
-🛠️ Cấu hình
+## Cấu hình
 Để sử dụng tính năng LLM, bạn cần cấu hình OpenAI API key trong file voice_navigation.py:
-# voice_navigation.py
+voice_navigation.py
 api_key = "YOUR_OPENAI_API_KEY"
