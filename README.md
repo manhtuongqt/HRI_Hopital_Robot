@@ -1,12 +1,13 @@
+Mô phỏng Robot Dịch vụ Bệnh viện (HRI) 🏥🤖
 Hệ thống tương tác Người - Robot (HRI) tiên tiến cho robot dịch vụ trong môi trường y tế. Dự án tích hợp các mô hình ngôn ngữ lớn (LLM) với hệ điều hành Robot (ROS) để thực hiện điều hướng thông minh và hỗ trợ bệnh nhân bằng giọng nói.
 
-Các Tính năng Nổi bật
+🌟 Các Tính năng Nổi bật
 Hiểu ngôn ngữ tự nhiên (NLU): Tích hợp GPT-4o-mini API để xử lý các câu hỏi phức tạp của bệnh nhân và trích xuất ý định điều hướng từ lời nói tự nhiên (không chỉ là câu lệnh đơn lẻ).
 Luồng Speech-to-Intent: Quy trình xử lý giọng nói thời gian thực sử dụng SpeechRecognition (STT) và gTTS (TTS), cho phép tương tác rảnh tay hoàn toàn.
 Prompt Engineering chuyên dụng: Hệ thống prompt được thiết kế riêng cho môi trường y tế, đảm bảo robot nhận diện đúng khoa/phòng và đưa ra phản hồi phù hợp.
 Hỗ trợ dựa trên ngữ cảnh: Kết nối với SQLite backend chứa sơ đồ bệnh viện, danh sách khoa và dữ liệu bệnh nhân để cá nhân hóa trải nghiệm dẫn đường.
 Điều hướng tự động (Navigation): Tích hợp mượt mà với ROS Navigation Stack (MoveBase) và Gazebo để robot di chuyển chính xác trên bản đồ 2D/3D.
- Kiến trúc Hệ thống
+🏗️ Kiến trúc Hệ thống
 Nhận thức (Perception): Thu âm giọng nói → Chuyển thành văn bản (STT).
 Trí tuệ (Intelligence): Gửi văn bản tới GPT-4o-mini kèm prompt ngữ cảnh y tế → Trả về ý định dưới dạng JSON (Ví dụ: {"location": "Khoa Nội", "action": "navigate"}).
 Cơ sở dữ liệu: Truy vấn SQL Database nếu cần thông tin cá nhân của bệnh nhân hoặc chi tiết phòng ban.
