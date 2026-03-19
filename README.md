@@ -1,10 +1,10 @@
-# Mô phỏng Robot Dịch vụ Bệnh viện (HRI) 🏥🤖
+# Mô phỏng Robot Dịch vụ Bệnh viện (HRI) 
 
 Hệ thống tương tác Người - Robot (HRI) tiên tiến cho robot dịch vụ trong môi trường y tế. Dự án tích hợp các mô hình ngôn ngữ lớn (LLM) với hệ điều hành Robot (ROS) để thực hiện điều hướng thông minh và hỗ trợ bệnh nhân bằng giọng nói.
 
 ---
 
-## 🌟 Các Tính năng Nổi bật
+##  Các Tính năng Nổi bật
 
 - **Hiểu ngôn ngữ tự nhiên (NLU)**: Tích hợp **GPT-4o-mini API** để xử lý các câu hỏi phức tạp của bệnh nhân và trích xuất ý định điều hướng từ lời nói tự nhiên (không chỉ là câu lệnh đơn lẻ).
 
@@ -68,6 +68,6 @@ roslaunch hospital_simulation hospital.launch
 ### 4.Chạy node điều khiển bằng giọng nói:
 python3 voice_navigation.py
 ## Cấu hình
-Để sử dụng tính năng LLM, bạn cần cấu hình OpenAI API key trong file voice_navigation.py:
-voice_navigation.py
-api_key = "YOUR_OPENAI_API_KEY"
+### Để sử dụng tính năng LLM, bạn cần cấu hình OpenAI API key trong file voice_navigation.py:
+### voice_navigation.py 
+### api_key = "YOUR_OPENAI_API_KEY"
